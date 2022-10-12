@@ -181,3 +181,9 @@ html,body{
     color: #ffffff;
   }
 
+
+  @media screen and (min-width: 480px) {
+    .hover-underline-animation {
+      position: inherit;
+    }
+  }
