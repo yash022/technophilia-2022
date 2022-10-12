@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="/technophilia-2022/styles/cart.css">
+      <title>Cart</title>
+   </head>
+   <body class="h-screen mx-auto mt-10">
+      <div class="cart-card w-3/4 bg-white px-10 py-10 shadow-md h-screen">
+         <div class="flex justify-between border-b pb-6">
+            <h1 class="font-semibold text-2xl">Shopping Cart</h1>
+            <h2 class="font-semibold text-2xl">3 Items</h2>
+         </div>
+         <div class="flex mt-10 mb-5">
+            <h3 class="font-semibold text-gray-600 text-xs uppercase w-2/5">Product Details</h3>
+            <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Quantity</h3>
+            <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Price</h3>
+            <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Total</h3>
+         </div>
+         <!-- product -->
+         <div class="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5 product">
+            <div class="flex w-2/5">
+               <div class="w-20">
+                  <img class="h-24" src="women/shoe1.jpg" alt="">
+               </div>
+               <div class="flex flex-col justify-between ml-4 flex-grow">
+                  <span class="font-bold text-sm">Iphone 6S (free gift)</span>
+                  <span class="text-red-500 text-xs">Apple</span>
+                  <a href="#" class="font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
+               </div>
+            </div>
+            <div class="flex justify-center w-1/5">
+               <svg class="cursor-pointer remove fill-current text-gray-600 w-3" viewBox="0 0 448 512">
+                  <path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+               </svg>
+               <input class="value mx-2 border text-center w-8 rounded-md text-sm" type="number" value="1" min="0" max>
+               <svg class="add  cursor-pointer fill-current text-gray-600 w-3" viewBox="0 0 448 512">
+                  <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+               </svg>
+            </div>
+            <span class="text-center w-1/5 font-semibold text-sm">₹0.00</span>
+            <span class="text-center w-1/5 font-semibold text-sm">₹0.00</span>
+         </div>
+      </div>
+      <div class="cart-card bg-white shadow-md h-screen summary">
+         <h1 class="font-semibold text-2xl border-b pb-8">Order Summary</h1>
+         <div class="flex justify-between mt-10 mb-5">
+            <span class="font-semibold text-sm uppercase">Items 4</span>
+            <span class="font-semibold text-sm">1,19,040</span>
+         </div>
+         <div>
+            <label class="font-medium inline-block mb-3 text-sm uppercase">Shipping</label>
+            <select class="block p-2 text-gray-600 w-full text-sm">
+               <option>Standard shipping - ₹100</option>
+            </select>
+         </div>
+         <div class="py-10">
+            <label for="promo" class="font-semibold inline-block mb-3 text-sm uppercase">Promo Code</label>
+            <input type="text" id="promo" placeholder="Enter your code" class="p-2 text-sm w-full shadow-md">
+         </div>
+         <button class="bg-red-500 hover:bg-red-600 px-5 py-2 text-sm text-white uppercase">Apply</button>
+         <div class="border-t mt-8">
+            <div class="flex font-semibold justify-between py-6 text-sm uppercase">
+               <span>Total cost</span>
+               <span>₹1,19,140</span>
+            </div>
+            <button class="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Checkout</button>
+         </div>
+      </div>
+      </div>
+   </body>
+   <script>
+      window.addEventListener('load', (event) => {
+        var product_keys = Object.keys(localStorage);
+        var products_titles = [];
+        var prices = [];
+        var images = [];
+        var ids = [];
+        for (var i = 0; i < product_keys.length; i++) {
+          products_titles.push(JSON.parse(localStorage[product_keys[i].toString()]).product_title);
+          prices.push(JSON.parse(localStorage[product_keys[i].toString()]).product_price);
+          images.push(JSON.parse(localStorage[product_keys[i].toString()]).product_image);
+          ids.push(JSON.parse(localStorage[product_keys[i].toString()]).id);
+        }
+        for (let index = 0; index < products_titles.length; index++) {
+          document.getElementsByClassName("cart-card")[0].innerHTML += `
+          <div class="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5 product" id=${ids[index]}>
+              <div class="flex w-2/5"> 
+                <div class="w-20">
+                  <img class="h-24" src=${images[index]} alt="">
+                </div>
+                <div class="flex flex-col justify-between ml-4 flex-grow">
+                  <span class="font-bold text-sm">${products_titles[index]}</span>
+                  <a href="#" class="font-semibold hover:text-red-500 text-gray-500 text-xs">Remove</a>
+                </div>
+              </div>
+              <div class="flex justify-center w-1/5">
+                <svg class="cursor-pointer remove fill-current text-gray-600 w-3" viewBox="0 0 448 512"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                </svg>
+      
+                <input class="value mx-2 border text-center w-8 rounded-md text-sm" type="number" value="1" min="0" max>
+      
+                <svg class="add  cursor-pointer fill-current text-gray-600 w-3" viewBox="0 0 448 512">
+                  <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+                </svg>
+              </div>
+              <span class="text-center w-1/5 font-semibold text-sm">${prices[index]}</span>
+              <span class="text-center w-1/5 font-semibold text-sm">${prices[index]}</span>
+            </div>   
+          </div>
+         `;
+      
+        }
+      });
+      
+      const add_btn = document.getElementsByClassName("add")[0];
+      const remove_btn = document.getElementsByClassName("remove")[0];
+      const Quantity = document.getElementsByClassName("value")[0];
+      add_btn.addEventListener("click", function() {
+          Quantity.value++;
+      });
+      remove_btn.addEventListener("click", function() {
+          Quantity.min = 0;
+          Quantity.value--;
+      });
+      
+      
+      
+      
+      
+      //     var product_img = [];
+      //     for (let index = 0; index < product_keys.length; index++) {
+      //         product_img.push(JSON.parse(localStorage[product_keys[index].toString()]).product_image);
+      
+          
+      //     }
+      
+      
+      //     window.addEventListener('load', (event) => {
+      //     var remove_btnn = document.getElementsByTagName("a");
+      //     for (let i = 0; i < remove_btnn.length; i++) {
+      
+      // }
+      //     });
+   </script>
+   <script>
+      var product_keys = Object.keys(localStorage);
+      var productss = document.getElementsByClassName("product");
+      window.onload = ()=>{
+      const remove_button = document.getElementsByTagName("a");
+      for (let i = 0; i < remove_button.length; i++) {
+          remove_button[i].onclick = ()=>{
+            productss[i].remove();
+          }
+      }
+      }
+      
+   </script>
+</html>
