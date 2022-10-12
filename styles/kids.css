@@ -1,0 +1,44 @@
+html,
+body {
+  background-color: #f5f8ff;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* CSS variables */
+:root {
+  --primary-font: "Poppins"
+  --bg-color: #f5f8ff;
+  --text-color: #000000;
+  --border-color: #aaaaaa;
+}
+
+
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #222 !important;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
