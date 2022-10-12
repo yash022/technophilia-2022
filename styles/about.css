@@ -1,0 +1,146 @@
+html,
+body {
+  background-color: #f5f8ff;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* CSS variables */
+:root {
+  --primary-font: "Poppins"
+  --bg-color: #f5f8ff;
+  --text-color: #000000;
+  --border-color: #aaaaaa;
+}
+
+/* CSS reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* About Us */
+
+.about {
+  padding: 100px;
+}
+
+.about1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #0000001a;
+  border-bottom-width: 1px 0px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+.about1 .two {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline !important;
+  border-bottom: 1px solid #0000001a;
+  border-bottom-width: 1px 0px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+.main-shoe-img {
+  height: 400px;
+}
+
+.about1 h3 {
+  width: 500px;
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+/* Features */
+
+.special {
+  display: flex;
+  justify-content: space-between;
+  padding: 28px;
+  gap: 24px;
+  align-items: center;
+  border-bottom: 1px solid #0000001a;
+  border-bottom-width: 1px 0px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.text p {
+  font-weight: 300;
+  font-size: 15px;
+  color: #666666;
+  margin-top: -1px;
+}
+
+h2 {
+  padding-left: 0 !important;
+  padding: 10px;
+}
+
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #222 !important;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+
+/* responsiveness */
+@media (max-width: 1055px) {
+  .about {
+    padding: 25px;
+    flex-direction: column;
+  }
+
+  .about1 h3 {
+    font-size: 11px;
+    width: 120px;
+  }
+
+  .about1 img {
+    height: 150px;
+  }
+
+  .special {
+    flex-direction: column;
+    text-align: center;
+  }
+}
