@@ -1,0 +1,174 @@
+html,
+body {
+  background-color: #f5f8ff;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* to hide the Arrw in the number input  */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* CSS variables */
+:root {
+  --primary-font: "Poppins"
+  --bg-color: #f5f8ff;
+  --text-color: #000000;
+  --border-color: #aaaaaa;
+}
+
+
+.input::focus {
+  border: 1px #222;
+}
+.contact {
+  margin-top: 30px !important;
+  margin: 100px;
+}
+
+.rw {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.rw input {
+  border-radius: 5px;
+  border: none;
+  padding: 20px;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  width: 450px;
+}
+
+.contact select {
+  border-radius: 5px;
+  border: none;
+  padding: 20px;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  width: 490px;
+  cursor: pointer;
+}
+
+.textar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.message {
+  border: none;
+  resize: none;
+  width: 500px;
+  padding: 20px;
+  height: 150px;
+  outline: none;
+  font-size: 15px;
+  border-radius: 3px;
+  font-family: "Poppins", sans-serif;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit {
+  border-radius: 10px;
+  width: 100px;
+  border: solid 1px black;
+  color: black;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.submit:hover {
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 1252px) {
+  .contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .rw {
+    flex-direction: column;
+    width: fit-content !important;
+  }
+  .rw input {
+    width: 250px;
+  }
+  .rw select {
+    width: 250px;
+  }
+  .textar {
+    flex-direction: column;
+    width: fit-content !important;
+  }
+  .message {
+    width: 250px;
+  }
+}
+
+/* CSS variables */
+:root {
+  --bg-color: #f5f8ff;
+  --text-color: #000000;
+  --border-color: #aaaaaa;
+}
+
+
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #222 !important;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@media (max-width: 976px){
+  .large{
+    margin-top: 30px;
+  }
+}
