@@ -1,0 +1,49 @@
+home,
+body {
+	background-color: #F5F8FF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+}
+
+.cart-card {
+	padding: 20px 0 15px 0;
+	font-family: "Amazon Ember", Arial, sans-serif;
+	height: 391.6px;
+	padding: 14px 18px 18px;
+	font-weight: 400;
+	font-size: 28px;
+	line-height: 36px;
+}
+
+h1 {
+	font-weight: 400;
+	font-size: 28px;
+	line-height: 36px;
+}
+
+
+.cart-card {
+	overflow: auto;
+
+}
+
+
+/*to hide the scrollbar */
+.cart-card {
+	-ms-overflow-style: none;
+	/* Internet Explorer 10+ */
+	scrollbar-width: none;
+	/* Firefox */
+}
+
+.cart-card::-webkit-scrollbar {
+	display: none;
+	/* Safari and Chrome */
+}
+
+.summary {
+	margin-left: 10px;
+}
