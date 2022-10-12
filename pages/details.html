@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/styles/details.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <title>Product Details</title>
+</head>
+<body>
+   <div class="max-w-2xl">
+      <nav class="w-screen pt-[10px] px-[35px]">
+         <div class="container mx-auto flex flex-wrap items-center justify-between">
+            <a href="https://yash022.github.io/technophilia-2022/home.html">
+               <img src="https://yash022.github.io/technophilia-2022/assets/logo.png" style="width:50px; height:30px" alt="Company logo"/>
+            </a>
+            <button data-collapse-toggle="mobile-menu" type="button" class="md:hidden ml-3 text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-2" aria-expanded="false">
+               <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+               </svg>
+               <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+               </svg>
+            </button>
+            <div class="hidden md:block w-full md:w-auto" id="mobile-menu">
+               <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
+                  <li>
+                     <a href="https://yash022.github.io/technophilia-2022/pages/home.html" class="hover-underline-animation pb-1 pt-5 px-3 text-gray-700 font-medium cursor-pointer" aria-current="page">Home</a>
+                  </li>
+                  <li>
+                     <a href="https://yash022.github.io/technophilia-2022/pages/about.html" class="hover-underline-animation pb-1 pt-5 px-3 text-gray-700 font-medium cursor-pointer">About</a>
+                  </li>
+                  <li>
+                     <a href="https://yash022.github.io/technophilia-2022/pages/mens.html" class="hover-underline-animation pb-1 pt-5 px-3 text-gray-700 font-medium cursor-pointer">Mens</a>
+                  </li>
+                  <li>
+                     <a href="https://yash022.github.io/technophilia-2022/pages/womens.html" class="hover-underline-animation pb-1 pt-5 px-3 text-gray-700 font-medium cursor-pointer">Womens</a>
+                  </li>
+                  <li>
+                     <a href="https://yash022.github.io/technophilia-2022/pages/kids.html" class="hover-underline-animation pb-1 pt-5 px-3 text-gray-700 font-medium cursor-pointer">Kids</a>
+                  </li>
+                  <li>
+                     <a href="https://yash022.github.io/technophilia-2022/pages/contact.html" class="hover-underline-animation pb-1 pt-5 px-3 text-gray-700 font-medium cursor-pointer">Contact us</a>
+                  </li>
+                  <li>
+                     <a href="https://yash022.github.io/technophilia-2022/pages/cart.html" class="hover-underline-animation pb-1 pt-5 px-3 text-gray-700 font-medium cursor-pointer">Cart</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+   </div>
+    <div class="card flex w-screen h-screen items-center p-6">
+        <div class="product-img shadow-sm rounded-sm w-screen">
+           <img src="women/shoe1.jpg" alt="shoe image">
+        </div>
+        <div class="product-content">
+           <h2 class="product-title">
+              Nike Shoes
+           </h2>
+           <div class="flex items-center">
+              <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                 <title>First star</title>
+                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                 <title>Second star</title>
+                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                 <title>Third star</title>
+                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                 <title>Fourth star</title>
+                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg aria-hidden="true" class="no-color-star w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                 <title>Fifth star</title>
+                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <p class="rating ml-2 text-sm font-medium">4.95 out of 5</p>
+           </div>
+           <p class="last-price">Old Price: <span>₹90,000</span></p>
+           <p class="new-price">New Price: <span>$249.00 (5%)</span></p>
+           <div class="product-detail">
+              <h2 class="about-title">about this item: </h2>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit molestias explicabo totam temporibus odio? Dicta officiis possimus cum iste magni sint veritatis, perferendis esse ipsum nemo quidem vel saepe quae eum velit, labore impedit natus soluta expedita consequuntur. Eum labore sint doloribus asperiores culpa natus, vel laboriosam consectetur officiis quae.</p>
+              <ul>
+                 <li>Color: <span>Black</span></li>
+                 <li>Available: <span>in stock</span></li>
+                 <li>Category: <span>Shoes</span></li>
+                 <li>Shipping Area: <span>All over the world</span></li>
+                 <li>Shipping Fee: <span>Free</span></li>
+              </ul>
+           </div>
+           <div class="purchase-info">
+              <input type="number" min="0" value="1">
+              <button clas="addtocart" type="button" class="btn">
+              Add to Cart <i class="fas fa-shopping-cart"></i>
+              </button>
+              <button type="button" class="btn">Compare</button>
+           </div>
+           <div class="social-links">
+              <p>Share At: </p>
+              <a href="#">
+              <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+              <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+              <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+              <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="#">
+              <i class="fab fa-pinterest"></i>
+              </a>
+           </div>
+        </div>
+     </div>
+</body>
+<script>
+    const img = document.getElementsByTagName('img');
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const product = urlParams.get('product')
+      const price = urlParams.get('price')
+      const image = urlParams.get('img');
+      const id = urlParams.get('id');
+      const new_price = document.getElementsByClassName("new-price")[0];
+      const new_price_span = new_price.getElementsByTagName("span")[0];
+      const product_title = document.getElementsByClassName("product-title")[0];
+      new_price_span.innerHTML = price;
+      product_title.innerHTML = product;
+      img[1].src = image;
+      const addtocart_btn = document.getElementsByTagName("button")[0];
+      var data = {
+            product_title: product,
+            product_price: price,
+            product_image: image,
+            id:id
+         }
+      addtocart_btn.addEventListener("click", ()=> {
+         localStorage.setItem("data_techno", JSON.stringify(data));
+
+      })
+</script>
+</html>
+<script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
